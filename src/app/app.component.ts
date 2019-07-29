@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { callLifecycleHooksChildrenFirst } from '@angular/core/src/view/provider';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  
+  componentTitle = "I am app component from component.ts";
+
+  ClickHandler(){
+     alert("Click!");
+  };
 }
